@@ -1,4 +1,5 @@
-import { Button, Flex, Heading, Input } from "@chakra-ui/react";
+import { Button, Flex, Heading, Input, Text } from "@chakra-ui/react";
+import Link from "next/link";
 
 export default function Login() {
   return (
@@ -19,6 +20,25 @@ export default function Login() {
             type='password'
           />
           <Button colorScheme='blue'>Log in</Button>
+          <Flex direction='row'>
+            <List color='white' fontSize='1.2em' spacing={4}>
+              <ListItem>
+                <Link import {...NextLink} href='/signup'>
+                  Don't have an account? Sign up.
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link import {...NextLink} href='/privacy'>
+                  Privacy Policy
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link import {...NextLink} href='/tos'>
+                  Terms of Service
+                </Link>
+              </ListItem>
+            </List>
+          </Flex>
         </Flex>
       </Flex>
     </>
